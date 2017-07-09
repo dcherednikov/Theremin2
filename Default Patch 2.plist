@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>firstOscillatorVolume</key>
+        <real>0.5</real>
+        <key>secondOscillatorVolume</key>
+        <real>0.8</real>
+        <key>firstOscillatorWaveForm</key>
+        <integer>2</integer>
+        <key>secondOscillatorWaveForm</key>
+        <integer>3</integer>
+        <key>secondOscillatorRegisterType</key>
+        <integer>1</integer>
+        <key>phaseShift</key>
+        <real>0</real>
+        <key>reverb</key>
+        <real>90</real>
+    </dict>
+</plist>

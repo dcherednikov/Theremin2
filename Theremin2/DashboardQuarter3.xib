@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SynthVC">
+            <connections>
+                <outlet property="phaseShiftSlider" destination="G3Q-aM-d4k" id="wwR-fX-nGr"/>
+                <outlet property="secondOscillatorRegisterTypeButton" destination="1VC-EP-Fw7" id="dLs-Fo-y2j"/>
+                <outlet property="secondOscillatorRegisterTypeImageView" destination="F8h-e7-zQq" id="xdM-Pb-iKP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="sAN-pB-EhT">
+            <rect key="frame" x="0.0" y="0.0" width="242" height="258"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3Q-aM-d4k" customClass="CustomSlider">
+                    <rect key="frame" x="20" y="188" width="202" height="54"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="trackImage" value="SliderMinimum"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="Button"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="PHS"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="phaseShiftSliderValueChanged:" destination="-1" eventType="valueChanged" id="DlX-1A-Iy8"/>
+                    </connections>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Null" translatesAutoresizingMaskIntoConstraints="NO" id="F8h-e7-zQq">
+                    <rect key="frame" x="141" y="42" width="81" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="F8h-e7-zQq" secondAttribute="height" multiplier="647:701" id="i9a-t3-sw3"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VC-EP-Fw7">
+                    <rect key="frame" x="20" y="46" width="81" height="80.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1VC-EP-Fw7" secondAttribute="height" id="1oT-W9-SOc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="OCT" backgroundImage="Button">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="secondOscillatorRegisterTypeButtonPressed:" destination="-1" eventType="touchUpInside" id="WJw-KD-pju"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="G3Q-aM-d4k" firstAttribute="centerX" secondItem="sAN-pB-EhT" secondAttribute="centerX" id="RVN-Ry-Zlh"/>
+                <constraint firstItem="F8h-e7-zQq" firstAttribute="centerY" secondItem="sAN-pB-EhT" secondAttribute="centerY" multiplier="2:3" id="Wa9-lo-TPf"/>
+                <constraint firstItem="G3Q-aM-d4k" firstAttribute="width" secondItem="sAN-pB-EhT" secondAttribute="width" multiplier="5:6" id="eKe-JR-BCI"/>
+                <constraint firstItem="F8h-e7-zQq" firstAttribute="centerX" secondItem="sAN-pB-EhT" secondAttribute="centerX" multiplier="3:2" id="el3-mc-3Jm"/>
+                <constraint firstItem="1VC-EP-Fw7" firstAttribute="centerX" secondItem="sAN-pB-EhT" secondAttribute="centerX" multiplier="1:2" id="fG9-ir-7TH"/>
+                <constraint firstItem="1VC-EP-Fw7" firstAttribute="centerY" secondItem="sAN-pB-EhT" secondAttribute="centerY" multiplier="2:3" id="jgN-Xs-ftv"/>
+                <constraint firstItem="G3Q-aM-d4k" firstAttribute="centerY" secondItem="sAN-pB-EhT" secondAttribute="centerY" multiplier="10:6" id="mHL-rc-rln"/>
+                <constraint firstItem="G3Q-aM-d4k" firstAttribute="height" secondItem="sAN-pB-EhT" secondAttribute="width" multiplier="2:9" id="rFy-Ol-Uf9"/>
+                <constraint firstItem="1VC-EP-Fw7" firstAttribute="width" secondItem="sAN-pB-EhT" secondAttribute="width" multiplier="1:3" id="xJO-U0-Oxn"/>
+                <constraint firstItem="F8h-e7-zQq" firstAttribute="width" secondItem="sAN-pB-EhT" secondAttribute="width" multiplier="1:3" id="yyQ-Al-sXU"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-32" y="-150"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Button" width="251" height="250"/>
+        <image name="Null" width="323" height="350"/>
+        <image name="SliderMinimum" width="232" height="10"/>
+    </resources>
+</document>
